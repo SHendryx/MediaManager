@@ -1,0 +1,69 @@
+﻿@page
+@model MediaManager.Pages.Media.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MediaFile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MediaFile.Title" class="control-label"></label>
+                <input asp-for="MediaFile.Title" class="form-control" />
+                <span asp-validation-for="MediaFile.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.ReleaseYear" class="control-label"></label>
+                <input asp-for="MediaFile.ReleaseYear" class="form-control" />
+                <span asp-validation-for="MediaFile.ReleaseYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.MediaType" class="control-label"></label>
+                <input asp-for="MediaFile.MediaType" class="form-control" />
+                <span asp-validation-for="MediaFile.MediaType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.LengthSeconds" class="control-label"></label>
+                <input asp-for="MediaFile.LengthSeconds" class="form-control" />
+                <span asp-validation-for="MediaFile.LengthSeconds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.Container" class="control-label"></label>
+                <input asp-for="MediaFile.Container" class="form-control" />
+                <span asp-validation-for="MediaFile.Container" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.Codec" class="control-label"></label>
+                <input asp-for="MediaFile.Codec" class="form-control" />
+                <span asp-validation-for="MediaFile.Codec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.AudioFormat" class="control-label"></label>
+                <input asp-for="MediaFile.AudioFormat" class="form-control" />
+                <span asp-validation-for="MediaFile.AudioFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaFile.VideoFormat" class="control-label"></label>
+                <input asp-for="MediaFile.VideoFormat" class="form-control" />
+                <span asp-validation-for="MediaFile.VideoFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

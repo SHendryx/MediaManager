@@ -1,0 +1,78 @@
+﻿@page
+@model MediaManager.Pages.Media.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].ReleaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].MediaType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].LengthSeconds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].Container)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].Codec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].AudioFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaFile[0].VideoFormat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MediaFile) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LengthSeconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Container)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AudioFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VideoFormat)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

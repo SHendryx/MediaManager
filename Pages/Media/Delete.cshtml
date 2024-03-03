@@ -1,0 +1,70 @@
+﻿@page
+@model MediaManager.Pages.Media.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MediaFile</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.ReleaseYear)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.ReleaseYear)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.MediaType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.MediaType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.LengthSeconds)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.LengthSeconds)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Container)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Container)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Codec)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Codec)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.AudioFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.AudioFormat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.VideoFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.VideoFormat)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="MediaFile.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

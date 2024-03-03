@@ -4,10 +4,11 @@ namespace MediaManager.Models
 {
     public class File
     {
-        public string FileName { get; set; }
-        public string FilePath { get; set; }
-        public string FileExtension { get; set; }
-        public string FileType { get; set; }
+        public int Id { get; set; }
+        public string FileName { get; set; } = string.Empty;
+        public string FilePath { get; set; } = string.Empty;
+        public string FileExtension { get; set; } = string.Empty;
+        public string FileType { get; set; } = string.Empty;
         [DataType(DataType.DateTime)]
         public DateTime CreationTime { get; set; }
     }

@@ -1,0 +1,67 @@
+﻿@page
+@model MediaManager.Pages.Media.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MediaFile</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.ReleaseYear)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.ReleaseYear)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.MediaType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.MediaType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.LengthSeconds)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.LengthSeconds)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Container)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Container)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.Codec)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.Codec)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.AudioFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.AudioFormat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaFile.VideoFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MediaFile.VideoFormat)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.MediaFile.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
